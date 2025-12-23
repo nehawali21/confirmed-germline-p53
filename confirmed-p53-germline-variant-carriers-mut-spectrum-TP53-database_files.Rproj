@@ -1,0 +1,16 @@
+Version: 1.0
+ProjectId: d013f066-4a70-4aa3-bdc3-9cb51351d1aa
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+ProjectName: germline p53
