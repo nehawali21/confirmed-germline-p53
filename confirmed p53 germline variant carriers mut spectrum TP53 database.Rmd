@@ -144,14 +144,14 @@ I also took p53 mutations described in Figure 5C of @tang2022 as being transcrip
 
 $~$
 
-In this code, I have then read in the entire downloaded file as a dataframe, removed any duplicated rows (which were none), and have just displayed the first six rows of the table to get a preview of the data.
+In this code, I have then read in all items.
 
 $~$
 
 ```{r inputdata, results = 'hide', message = FALSE, warning = FALSE}
 #read in entire p53 germline variant data downloaded from TP53 database
 origdatabase <- read.csv(paste0(input_path,
-                                "GermlineDownload_r20 ALL.csv"), 
+                                "GermlineDownload_r21 ALL.csv"), 
                          sep = ",",
                          header = TRUE) %>%
   remove_rownames()
@@ -442,12 +442,12 @@ breakdown <- breakdown %>%
   remove_rownames()
 
 # num total families in dataset
-n_distinct(breakdown$Family_code) # 960
+n_distinct(breakdown$Family_code) # 1034
 
 # find patients which have multiple cancers for individual analyses
 # remove patients which didn't have cancer at follow-up and with no age of diagnosis
 origdbdefcancer <- breakdown %>% 
-  subset(Unaffected == "false") %>% 
+  subset(Unaffected == FALSE) %>% 
   drop_na(Age_at_diagnosis) %>% 
   distinct()
 
@@ -490,7 +490,7 @@ all(origdbmultcancer$Individual_code %in% multpts$Individual_code) # should be T
 breakdown <- breakdown %>% 
   mutate(cancer_freq_pt_type = dplyr::case_when(Individual_code %in% solepts$Individual_code ~ "sole",
                                                 Individual_code %in% multpts$Individual_code ~ "multiple",
-                                                Unaffected == "true" ~ "none",
+                                                Unaffected == TRUE ~ "none",
                                                 TRUE ~ "notyet"))
 
 # #save cleaned, breakdown, def, multiple, and sole cancer data as CSV
@@ -587,7 +587,7 @@ write.csv(mut_not_rescued %>% parse_number() %>% abs() %>% sort(),
 
 $~$
 
-After cleaning the data as above, we are left with `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries from `r format(c(n_distinct(breakdown$Individual_code)), big.mark = ",", trim = TRUE)` individuals from `r format(c(n_distinct(breakdown$Family_code)), big.mark = ",", trim = TRUE)` families. Of these `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries, `r format(c(length(which(breakdown$Unaffected == "false"))), big.mark = ",", trim = TRUE)` are in patients with cancer (which are `r format(c(n_distinct(subset(breakdown, Unaffected == "false", select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals), while `r format(c(length(which(breakdown$Unaffected == "true"))), big.mark = ",", trim = TRUE)` entries are in patients with no cancer at the time of follow-up (which are `r format(c(n_distinct(subset(breakdown, Unaffected == "true", select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals). Moreover, of these `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries,
+After cleaning the data as above, we are left with `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries from `r format(c(n_distinct(breakdown$Individual_code)), big.mark = ",", trim = TRUE)` individuals from `r format(c(n_distinct(breakdown$Family_code)), big.mark = ",", trim = TRUE)` families. Of these `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries, `r format(c(length(origdbdefcancer$ProtDescription)), big.mark = ",", trim = TRUE)` are in patients with cancer (which are `r format(c(n_distinct(origdbdefcancer$Individual_code)), big.mark = ",", trim = TRUE)` individuals), while `r format(c(length(breakdown$ProtDescription)-length(origdbdefcancer$ProtDescription)), big.mark = ",", trim = TRUE)` entries are in patients with no cancer at the time of follow-up (which are `r format(c(n_distinct(breakdown$Individual_code)-n_distinct(origdbdefcancer$Individual_code)), big.mark = ",", trim = TRUE)` individuals). Moreover, of these `r format(c(length(breakdown$ProtDescription)), big.mark = ",", trim = TRUE)` entries,
 
 -   `r format(c(length(which(breakdown$Class == "LFS"))), big.mark = ",", trim = TRUE)` are in patients with the strict clinical definition of Li-Fraumeni syndrome,
 
@@ -768,7 +768,7 @@ $~$
 
 $~$
 
-In addition to this list of top `r format(c(n_distinct(origdbcancersover100$Short_topo)), big.mark = ",", trim = TRUE)` cancers, there are `r format(c(n_distinct(subset(breakdown, Unaffected == "true", select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals with no cancer at the time of follow-up who cumulatively have `r format(c(length(which(breakdown$Unaffected == "true"))), big.mark = ",", trim = TRUE)` entries of mutations.
+In addition to this list of top `r format(c(n_distinct(origdbcancersover100$Short_topo)), big.mark = ",", trim = TRUE)` cancers, there are `r format(c(n_distinct(breakdown$Individual_code)-n_distinct(origdbdefcancer$Individual_code)), big.mark = ",", trim = TRUE)` individuals with no cancer at the time of follow-up who cumulatively have `r format(c(length(breakdown$ProtDescription)-length(origdbdefcancer$ProtDescription)), big.mark = ",", trim = TRUE)` entries of mutations.
 
 $~$
 
@@ -876,33 +876,35 @@ cancersperpt <- origdbmultcancer %>%
   distinct()
 cancersperpt <- cancersperpt[gtools::mixedorder(cancersperpt$cancer_incidence),] %>% 
   remove_rownames()
-cancersperpt_pivot <- pivot_wider(cancersperpt,
-                                  names_from = cancer_incidence,
-                                  values_from = Short_topo)
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 2`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 1`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 3`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 4`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 5`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 6`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 7`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 8`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 9`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 10`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 11`),] %>%
-  remove_rownames()
-cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 12`),] %>%
-  remove_rownames()
+
+# # turning into list and not working, not troubleshot
+# cancersperpt_pivot <- pivot_wider(cancersperpt,
+#                                   names_from = cancer_incidence,
+#                                   values_from = Short_topo)
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 2`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 1`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 3`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 4`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 5`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 6`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 7`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 8`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 9`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 10`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 11`),] %>%
+#   remove_rownames()
+# cancersperpt_pivot <- cancersperpt_pivot[order(cancersperpt_pivot$`Cancer 12`),] %>%
+#   remove_rownames()
 
 # count how many patients with 1, 2, 3, 4, etc. cancers
 cancerfreq <- ptswithcancer %>% 
@@ -953,23 +955,23 @@ cancerfreqsex_withtotal <- cancerfreqsex_pivot %>%
 cancerfreqsex_withtotal[is.na(cancerfreqsex_withtotal)] <- as.integer('0')
 
 # save cancers per pt pivot and cancer freq tables as CSV
-write_csv(cancersperpt_pivot,
-          file = paste0(table_path, "cancersperpt_pivot_germline.csv"))
+# write_csv(cancersperpt_pivot,
+#           file = paste0(table_path, "cancersperpt_pivot_germline.csv"))
 write_csv(cancerfreq_withtotal,
           file = paste0(table_path, "cancerfreq_withtotal_germline.csv"))
 write_csv(cancerfreqsex_withtotal,
           file = paste0(table_path, "cancerfreqsex_withtotal_germline.csv"))
 
 # show cancers per pt pivot
-kbl(cancersperpt_pivot, 
-    row.names = TRUE) %>% 
-  kable_styling(bootstrap_options = c("striped", 
-                                      "responsive", 
-                                      "condensed", 
-                                      "hover"), 
-                fixed_thead = TRUE) %>%
-  scroll_box(width = "100%", 
-             height = "450px")
+# kbl(cancersperpt_pivot, 
+#     row.names = TRUE) %>% 
+#   kable_styling(bootstrap_options = c("striped", 
+#                                       "responsive", 
+#                                       "condensed", 
+#                                       "hover"), 
+#                 fixed_thead = TRUE) %>%
+#   scroll_box(width = "100%", 
+#              height = "450px")
 ```
 
 $~$
@@ -1032,7 +1034,7 @@ $~$
 # make subset of data with topologies with at least 100 unique mutated tumor IDs and those without cancer
 # origdbjustcancersover100 <- origdbdefcancer %>%
 #   # breakdown %>% 
-#   # subset(breakdown$Short_topo %in% origdbcancersover100$Short_topo | Unaffected == "true") %>% 
+#   # subset(breakdown$Short_topo %in% origdbcancersover100$Short_topo | Unaffected == TRUE) %>% 
 #   distinct() %>% 
 #   remove_rownames()
 
@@ -1049,9 +1051,9 @@ origdbjustsolecancersover100 <- origdbsolecancer %>%
   remove_rownames()
 
 # num families in sole, mult, none cohorts
-n_distinct(origdbjustsolecancersover100$Family_code) # 661
-n_distinct(origdbjustmultcancersover100$Family_code) # 374
-breakdown %>% subset(Unaffected == "true") %>% pull(Family_code) %>% n_distinct() # 97
+n_distinct(origdbjustsolecancersover100$Family_code) # 699
+n_distinct(origdbjustmultcancersover100$Family_code) # 403
+breakdown %>% subset(Unaffected == TRUE) %>% pull(Family_code) %>% n_distinct() # 122
 
 # #check that cancers in new subset of data are only those with at least 100 (or 50) unique mutated tumor IDs
 # all(origdbjustcancersover100$Short_topo %in% origdbcancersover100$Short_topo | origdbjustcancersover100$Short_topo == '') #should be TRUE in console 
@@ -1380,7 +1382,7 @@ $~$
 
 ```{r blah2, include = FALSE}
 
-# <!-- After narrowing the data as above, we are left with `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries from `r format(c(n_distinct(origdbjustcancersover100$Individual_code)), big.mark = ",", trim = TRUE)` individuals from `r format(c(n_distinct(origdbjustcancersover100$Family_code)), big.mark = ",", trim = TRUE)` families. Of these `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries, `r format(c(length(which(origdbjustcancersover100$Unaffected == "false"))), big.mark = ",", trim = TRUE)` are in patients with cancer (which are `r format(c(n_distinct(subset(origdbjustcancersover100, Unaffected == "false", select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals), while `r format(c(length(which(origdbjustcancersover100$Unaffected == "true"))), big.mark = ",", trim = TRUE)` entries are in patients with no cancer at the time of follow-up (which are `r format(c(n_distinct(subset(origdbjustcancersover100, Unaffected == "true", select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals). Moreover, of these `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries, -->
+# <!-- After narrowing the data as above, we are left with `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries from `r format(c(n_distinct(origdbjustcancersover100$Individual_code)), big.mark = ",", trim = TRUE)` individuals from `r format(c(n_distinct(origdbjustcancersover100$Family_code)), big.mark = ",", trim = TRUE)` families. Of these `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries, `r format(c(length(which(origdbjustcancersover100$Unaffected == FALSE))), big.mark = ",", trim = TRUE)` are in patients with cancer (which are `r format(c(n_distinct(subset(origdbjustcancersover100, Unaffected == FALSE, select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals), while `r format(c(length(which(origdbjustcancersover100$Unaffected == TRUE))), big.mark = ",", trim = TRUE)` entries are in patients with no cancer at the time of follow-up (which are `r format(c(n_distinct(subset(origdbjustcancersover100, Unaffected == TRUE, select = "Individual_code"))), big.mark = ",", trim = TRUE)` individuals). Moreover, of these `r format(c(length(origdbjustcancersover100$ProtDescription)), big.mark = ",", trim = TRUE)` entries, -->
 # 
 # <!-- -   `r format(c(length(which(origdbjustcancersover100$Class == "LFS"))), big.mark = ",", trim = TRUE)` are in patients with the strict clinical definition of Li-Fraumeni syndrome, -->
 # 
@@ -2304,7 +2306,7 @@ $~$
 
 ```{r gt-summary-none-demog, message = FALSE, warning = FALSE, fig.width = 10}
 demog_df <- breakdown %>%
-  subset(Unaffected == "true") %>%
+  subset(Unaffected == TRUE) %>%
   dplyr::select(c(Individual_code,
                   #Cancer_Label,
                   Age_stratum,
@@ -7735,8 +7737,8 @@ cancerspertime_melted <- cancerspertime_melted %>%
 # make color-coded version of cancers per pt pivot table via ggplot2 and geom_tile
 cancersperpt$cancer_incidence <- factor(cancersperpt$cancer_incidence,
                                         levels = rev(unique(cancersperpt$cancer_incidence)))
-cancersperpt$Individual_code <- factor(cancersperpt$Individual_code,
-                                       levels = unique(cancersperpt_pivot$Individual_code))
+# cancersperpt$Individual_code <- factor(cancersperpt$Individual_code,
+#                                        levels = unique(cancersperpt_pivot$Individual_code))
 
 # for less frequent cancers, calling them other and not assigning germ layer
 cancersperpt$Short_topo_modif <- cancersperpt$Short_topo
@@ -8241,7 +8243,7 @@ $~$
 # 
 # # also want to add pts which had muts but no cancer yet to contingency 
 # pts_nocancer_muts <- breakdown %>% 
-#   subset(Unaffected == "true") %>% 
+#   subset(Unaffected == TRUE) %>% 
 #   dplyr::select(c(Individual_code, 
 #                   ProtDescription)) %>% 
 #   distinct() %>%  
@@ -8459,7 +8461,7 @@ $~$
 
 # # count how many males and females with 0 cancers
 # pts_nocancer_sex <- breakdown %>% 
-#   subset(Unaffected == "true") %>% 
+#   subset(Unaffected == TRUE) %>% 
 #   dplyr::select(c(Individual_code, 
 #                   Sex)) %>% 
 #   distinct() %>% 
@@ -8826,7 +8828,7 @@ $~$
 
 # # get survival of pts with 0 cancers
 # pts_nocancer_survival_sex <- breakdown %>% 
-#   subset(Unaffected == "true") %>% 
+#   subset(Unaffected == TRUE) %>% 
 #   dplyr::select(c(Individual_code, 
 #                   Sex,
 #                   Dead)) %>% 
@@ -9139,7 +9141,7 @@ $~$
 
 # get ages of pts with no cancer and add to previous df made of pts with muts and 0 cancers indicated
 # pts_nocancer_ages <- breakdown %>% 
-#   subset(Unaffected == "true") %>% 
+#   subset(Unaffected == TRUE) %>% 
 #   dplyr::select(c(Individual_code, 
 #                   Age,
 #                   Age_stratum)) %>% 
@@ -35071,7 +35073,7 @@ multspliceperpos$sortRowDataGroups(levelNumber = 2,
 multspliceperpos$evaluatePivot() #doing this instead of renderPivot() which takes too long as it shows an actual pivot table, but we need this as a dataframe anyways for calculations later so we don't need to print a pivot table
 
 nonespliceperpos <- PivotTable$new()
-nonespliceperpos$addData(breakdown_forsplice %>% subset(Unaffected == "true"))
+nonespliceperpos$addData(breakdown_forsplice %>% subset(Unaffected == TRUE))
 nonespliceperpos$addRowDataGroups("Isoform") 
 nonespliceperpos$addRowDataGroups("ProtDescription", addTotal = FALSE) # don't keep overall totals
 nonespliceperpos$defineCalculation(calculationName = "Count of distinct individuals",
@@ -35735,7 +35737,7 @@ splicechisq_df_mult <- origdbjustmultcancersover100_forsplice %>%
                                    subset(n > 1) %>% 
                                    pull(Individual_code))))
 
-splicechisq_df_nocancer <- breakdown_forsplice %>% subset(Unaffected == "true") %>% 
+splicechisq_df_nocancer <- breakdown_forsplice %>% subset(Unaffected == TRUE) %>% 
   dplyr::select(c(Individual_code,
                   Age,
                   Age_stratum,
@@ -35744,7 +35746,7 @@ splicechisq_df_nocancer <- breakdown_forsplice %>% subset(Unaffected == "true") 
                   Cancer_Label, TransactivationClass, SIFTClass, DNE_LOFclass, BayesDel, REVEL, Polyphen2, AGVGDClass, DNEclass, Region, Population,
                   Dead)) %>% 
   distinct() %>% # remove pts with mult muts where one has splice 
-  subset(!(Individual_code %in% (breakdown_forsplice %>% subset(Unaffected == "true") %>% 
+  subset(!(Individual_code %in% (breakdown_forsplice %>% subset(Unaffected == TRUE) %>% 
                                    dplyr::select(c(Individual_code,
                                                    Age,
                                                    Age_stratum,
@@ -35834,7 +35836,7 @@ multsplice$sortRowDataGroups(levelNumber = 1,
 multsplice$evaluatePivot() #doing this instead of renderPivot() which takes too long as it shows an actual pivot table, but we need this as a dataframe anyways for calculations later so we don't need to print a pivot table
 
 nonesplice <- PivotTable$new()
-nonesplice$addData(breakdown_forsplice %>% subset(Unaffected == "true"))
+nonesplice$addData(breakdown_forsplice %>% subset(Unaffected == TRUE))
 nonesplice$addRowDataGroups("Isoform")
 nonesplice$defineCalculation(calculationName = "Count of distinct individuals",
                              summariseExpression = "n_distinct(Individual_code)")
@@ -41534,7 +41536,7 @@ multATOperpos$sortRowDataGroups(levelNumber = 2,
 multATOperpos$evaluatePivot() #doing this instead of renderPivot() which takes too long as it shows an actual pivot table, but we need this as a dataframe anyways for calculations later so we don't need to print a pivot table
 
 noneATOperpos <- PivotTable$new()
-noneATOperpos$addData(breakdown_forATO %>% subset(Unaffected == "true"))
+noneATOperpos$addData(breakdown_forATO %>% subset(Unaffected == TRUE))
 noneATOperpos$addRowDataGroups("ATO") 
 noneATOperpos$addRowDataGroups("ProtDescription", addTotal = FALSE) # don't keep overall totals
 noneATOperpos$defineCalculation(calculationName = "Count of distinct individuals",
@@ -42339,7 +42341,7 @@ ATOchisq_df_mult <- origdbjustmultcancersover100_forATO %>%
                                    subset(n > 1) %>% 
                                    pull(Individual_code))))
 
-ATOchisq_df_nocancer <- breakdown_forATO %>% subset(Unaffected == "true") %>% 
+ATOchisq_df_nocancer <- breakdown_forATO %>% subset(Unaffected == TRUE) %>% 
   dplyr::select(c(Individual_code,
                   Age,
                   Age_stratum,
@@ -42348,7 +42350,7 @@ ATOchisq_df_nocancer <- breakdown_forATO %>% subset(Unaffected == "true") %>%
                   Cancer_Label, TransactivationClass, SIFTClass, DNE_LOFclass, BayesDel, REVEL, Polyphen2, AGVGDClass, DNEclass, Region, Population,
                   Dead)) %>% 
   distinct() %>% # remove pts with mult muts where one has ATO 
-  subset(!(Individual_code %in% (breakdown_forATO %>% subset(Unaffected == "true") %>% 
+  subset(!(Individual_code %in% (breakdown_forATO %>% subset(Unaffected == TRUE) %>% 
                                    dplyr::select(c(Individual_code,
                                                    Age,
                                                    Age_stratum,
@@ -42502,7 +42504,7 @@ multATO$sortRowDataGroups(levelNumber = 1,
 multATO$evaluatePivot() #doing this instead of renderPivot() which takes too long as it shows an actual pivot table, but we need this as a dataframe anyways for calculations later so we don't need to print a pivot table
 
 noneATO <- PivotTable$new()
-noneATO$addData(breakdown_forATO %>% subset(Unaffected == "true"))
+noneATO$addData(breakdown_forATO %>% subset(Unaffected == TRUE))
 noneATO$addRowDataGroups("ATO")
 noneATO$defineCalculation(calculationName = "Count of distinct individuals",
                           summariseExpression = "n_distinct(Individual_code)")
@@ -50346,7 +50348,7 @@ sole_vs_mult_ages_boxplot_df <- rbind(origdbjustsolecancersover100 %>%
                                                                    nrow(.),
                                                                    " individuals)")))
 
-sole_mult_none_ages_boxplot_df <- full_join(breakdown %>% subset(Unaffected == "true") %>% 
+sole_mult_none_ages_boxplot_df <- full_join(breakdown %>% subset(Unaffected == TRUE) %>% 
                                               dplyr::select(c(Individual_code,
                                                               Age,
                                                               Sex,
@@ -53656,7 +53658,7 @@ $~$
 venn_pts_sole_mult_none <- venn(list(multiple = unique(origdbjustmultcancersover100$Individual_code), 
                                      sole = unique(origdbjustsolecancersover100$Individual_code), 
                                      none = (breakdown %>%
-                                               subset(Unaffected == "true") %>% 
+                                               subset(Unaffected == TRUE) %>% 
                                                pull(Individual_code) %>% 
                                                unique())),
                                 ilabels = "counts",
@@ -53685,7 +53687,7 @@ $~$
 venn_families_sole_mult_none <- venn(list(multiple = unique(origdbjustmultcancersover100$Family_code), 
                                           sole = unique(origdbjustsolecancersover100$Family_code), 
                                           none = (breakdown %>% 
-                                                    subset(Unaffected == "true") %>%
+                                                    subset(Unaffected == TRUE) %>%
                                                     pull(Family_code) %>% 
                                                     unique())),
                                      ilabels = "counts",
