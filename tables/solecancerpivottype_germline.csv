@@ -1,8 +1,8 @@
 Short_topo,missense,nonsense,FS,splice,other,large del,NA,intronic,silent,Total
-BREAST,191,23,29,30,5,4,3,5,4,294
-OTHER,130,21,9,8,1,NA,NA,NA,NA,169
-BRAIN,116,9,9,6,4,2,NA,1,NA,147
-SOFT TISSUES,59,15,10,9,4,2,3,1,NA,103
-Adrenal cortical carcinoma,52,5,9,9,3,1,NA,NA,2,81
+BREAST,205,27,31,31,6,4,3,5,4,316
+OTHER,134,21,10,8,1,NA,NA,NA,NA,174
+BRAIN,118,13,10,6,4,2,NA,1,NA,154
+SOFT TISSUES,61,16,10,9,4,2,3,1,NA,106
+Adrenal cortical carcinoma,55,5,9,9,3,2,NA,NA,2,85
 Osteosarcoma,26,4,6,6,3,1,2,NA,NA,48
-Total,574,77,72,68,20,10,8,7,6,842
+Total,599,86,76,69,21,11,8,7,6,883

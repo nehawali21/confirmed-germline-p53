@@ -1,9 +1,936 @@
 TY  - BOOK
+TI  - AnVIL: Bioconductor on the AnVIL compute environment
+AU  - Ramos, Marcel
+AU  - Morgan, Martin
+AU  - Interdonato, Kayla
+AU  - Cheng, Yubo
+AU  - Turaga, Nitesh
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/Bioconductor/AnVIL
+N1  - <p>R package version 1.22.3</p>
+ER  - 
+
+TY  - BOOK
+TI  - AnVILBase: Generic functions for interacting with the AnVIL ecosystem
+AU  - Ramos, Marcel
+AU  - Morgan, Martin
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/Bioconductor/AnVILBase
+N1  - <p>R package version 1.4.0</p>
+ER  - 
+
+TY  - BOOK
 TI  - R: A Language and Environment for Statistical Computing
 AU  - R Core Team
 CY  - Vienna, Austria
+DA  - 2025///
+PY  - 2025
+PB  - R Foundation for Statistical Computing
+UR  - https://www.R-project.org/
+ER  - 
+
+TY  - BOOK
+TI  - Biobase: Base functions for Bioconductor
+AU  - Gentleman, R.
+AU  - Carey, V.
+AU  - Morgan, M.
+AU  - Falcon, S.
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/Biobase
+N1  - <p>R package version 2.70.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - BiocGenerics: S4 generic functions used in Bioconductor
+AU  - The Bioconductor Dev Team
+AU  - Pagès, Hervé
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/BiocGenerics
+N1  - <p>R package version 0.56.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - BiocManager: Access the Bioconductor Project Package Repository
+AU  - Morgan, Martin
+AU  - Ramos, Marcel
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.github.io/BiocManager/
+N1  - <p>R package version 1.30.27</p>
+ER  - 
+
+TY  - BOOK
+TI  - cBioPortalData: Exposes and Makes Available Data from the cBioPortal Web Resources
+AU  - Waldron, Levi
+AU  - Ramos, Marcel
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/waldronlab/cBioPortalData
+N1  - <p>R package version 2.22.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - cbioportalR: Browse and Query Clinical and Genomic Data from cBioPortal
+AU  - Whiting, Karissa
 DA  - 2024///
 PY  - 2024
+UR  - https://github.com/karissawhiting/cbioportalR
+N1  - <p>R package version 1.1.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - ComplexHeatmap: Make Complex Heatmaps
+AU  - Gu, Zuguang
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/jokergoo/ComplexHeatmap
+N1  - <p>R package version 2.26.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - condformat: Conditional Formatting in Data Frames
+AU  - Moreno, Sergio Oller
+DA  - 2023///
+PY  - 2023
+UR  - https://zeehio.github.io/condformat/
+N1  - <p>R package version 0.10.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - cowplot: Streamlined Plot Theme and Plot Annotations for ggplot2
+AU  - Wilke, Claus O.
+DA  - 2025///
+PY  - 2025
+UR  - https://wilkelab.org/cowplot/
+N1  - <p>R package version 1.2.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - devtools: Tools to Make Developing R Packages Easier
+AU  - Wickham, Hadley
+AU  - Hester, Jim
+AU  - Chang, Winston
+AU  - Bryan, Jennifer
+DA  - 2025///
+PY  - 2025
+UR  - https://devtools.r-lib.org/
+N1  - <p>R package version 2.4.6</p>
+ER  - 
+
+TY  - BOOK
+TI  - dplyr: A Grammar of Data Manipulation
+AU  - Wickham, Hadley
+AU  - François, Romain
+AU  - Henry, Lionel
+AU  - Müller, Kirill
+AU  - Vaughan, Davis
+DA  - 2023///
+PY  - 2023
+UR  - https://dplyr.tidyverse.org
+N1  - <p>R package version 1.1.4</p>
+ER  - 
+
+TY  - BOOK
+TI  - forcats: Tools for Working with Categorical Variables (Factors)
+AU  - Wickham, Hadley
+DA  - 2025///
+PY  - 2025
+UR  - https://forcats.tidyverse.org/
+N1  - <p>R package version 1.0.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - generics: Common S3 Generics not Provided by Base R Methods Related to Model Fitting
+AU  - Wickham, Hadley
+AU  - Kuhn, Max
+AU  - Vaughan, Davis
+DA  - 2025///
+PY  - 2025
+UR  - https://generics.r-lib.org
+N1  - <p>R package version 0.1.4</p>
+ER  - 
+
+TY  - BOOK
+TI  - GenomicRanges: Representation and manipulation of genomic intervals
+AU  - Aboyoun, Patrick
+AU  - Pagès, Hervé
+AU  - Lawrence, Michael
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/GenomicRanges
+N1  - <p>R package version 1.62.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - ggalluvial: Alluvial Plots in ggplot2
+AU  - Brunson, Jason Cory
+AU  - Read, Quentin D.
+DA  - 2023///
+PY  - 2023
+UR  - http://corybrunson.github.io/ggalluvial/
+N1  - <p>R package version 0.12.5</p>
+ER  - 
+
+TY  - BOOK
+TI  - ggh4x: Hacks for ggplot2
+AU  - Brand, Teun van den
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/teunbrand/ggh4x
+N1  - <p>R package version 0.3.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics
+AU  - Wickham, Hadley
+AU  - Chang, Winston
+AU  - Henry, Lionel
+AU  - Pedersen, Thomas Lin
+AU  - Takahashi, Kohske
+AU  - Wilke, Claus
+AU  - Woo, Kara
+AU  - Yutani, Hiroaki
+AU  - Dunnington, Dewey
+AU  - Brand, Teun van den
+DA  - 2025///
+PY  - 2025
+UR  - https://ggplot2.tidyverse.org
+N1  - <p>R package version 4.0.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - gridExtra: Miscellaneous Functions for "Grid" Graphics
+AU  - Auguie, Baptiste
+DA  - 2017///
+PY  - 2017
+UR  - https://CRAN.R-project.org/package=gridExtra
+N1  - <p>R package version 2.3</p>
+ER  - 
+
+TY  - BOOK
+TI  - gt: Easily Create Presentation-Ready Display Tables
+AU  - Iannone, Richard
+AU  - Cheng, Joe
+AU  - Schloerke, Barret
+AU  - Haughton, Shannon
+AU  - Hughes, Ellis
+AU  - Lauer, Alexandra
+AU  - François, Romain
+AU  - Seo, JooYoung
+AU  - Brevoort, Ken
+AU  - Roy, Olivier
+DA  - 2025///
+PY  - 2025
+UR  - https://gt.rstudio.com
+N1  - <p>R package version 1.2.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - gtsummary: Presentation-Ready Data Summary and Analytic Result Tables
+AU  - Sjoberg, Daniel D.
+AU  - Larmarange, Joseph
+AU  - Curry, Michael
+AU  - Rua, Emily de la
+AU  - Lavery, Jessica
+AU  - Whiting, Karissa
+AU  - Zabor, Emily C.
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/ddsjoberg/gtsummary
+N1  - <p>R package version 2.5.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - IRanges: Foundation of integer range manipulation in Bioconductor
+AU  - Pagès, Hervé
+AU  - Aboyoun, Patrick
+AU  - Lawrence, Michael
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/IRanges
+N1  - <p>R package version 2.44.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - janitor: Simple Tools for Examining and Cleaning Dirty Data
+AU  - Firke, Sam
+DA  - 2024///
+PY  - 2024
+UR  - https://github.com/sfirke/janitor
+N1  - <p>R package version 2.2.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - knitr: A General-Purpose Package for Dynamic Report Generation in R
+AU  - Xie, Yihui
+DA  - 2025///
+PY  - 2025
+UR  - https://yihui.org/knitr/
+N1  - <p>R package version 1.51</p>
+ER  - 
+
+TY  - BOOK
+TI  - lubridate: Make Dealing with Dates a Little Easier
+AU  - Spinu, Vitalie
+AU  - Grolemund, Garrett
+AU  - Wickham, Hadley
+DA  - 2024///
+PY  - 2024
+UR  - https://lubridate.tidyverse.org
+N1  - <p>R package version 1.9.4</p>
+ER  - 
+
+TY  - BOOK
+TI  - MatrixGenerics: S4 Generic Summary Statistic Functions that Operate on Matrix-Like Objects
+AU  - Ahlmann-Eltze, Constantin
+AU  - Hickey, Peter
+AU  - Pagès, Hervé
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/MatrixGenerics
+N1  - <p>R package version 1.22.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - matrixStats: Functions that Apply to Rows and Columns of Matrices (and to Vectors)
+AU  - Bengtsson, Henrik
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/HenrikBengtsson/matrixStats
+N1  - <p>R package version 1.5.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - MultiAssayExperiment: Software for the integration of multi-omics experiments in Bioconductor
+AU  - Ramos, Marcel
+AU  - Morgan, Martin
+AU  - Carey, Vincent J.
+AU  - Waldron, Levi
+DA  - 2025///
+PY  - 2025
+UR  - http://waldronlab.io/MultiAssayExperiment/
+N1  - <p>R package version 1.36.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - pacman: Package Management Tool
+AU  - Rinker, Tyler
+AU  - Kurkiewicz, Dason
+DA  - 2019///
+PY  - 2019
+UR  - https://github.com/trinker/pacman
+N1  - <p>R package version 0.5.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - pivottabler: Create Pivot Tables
+AU  - Bailiss, Christopher
+DA  - 2025///
+PY  - 2025
+UR  - http://www.pivottabler.org.uk/
+N1  - <p>R package version 1.5.6</p>
+ER  - 
+
+TY  - BOOK
+TI  - plotly: Create Interactive Web Graphics via plotly.js
+AU  - Sievert, Carson
+AU  - Parmer, Chris
+AU  - Hocking, Toby
+AU  - Chamberlain, Scott
+AU  - Ram, Karthik
+AU  - Corvellec, Marianne
+AU  - Despouy, Pedro
+DA  - 2025///
+PY  - 2025
+UR  - https://plotly-r.com
+N1  - <p>R package version 4.11.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - purrr: Functional Programming Tools
+AU  - Wickham, Hadley
+AU  - Henry, Lionel
+DA  - 2025///
+PY  - 2025
+UR  - https://purrr.tidyverse.org/
+N1  - <p>R package version 1.2.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - RColorBrewer: ColorBrewer Palettes
+AU  - Neuwirth, Erich
+DA  - 2022///
+PY  - 2022
+UR  - https://CRAN.R-project.org/package=RColorBrewer
+N1  - <p>R package version 1.1-3</p>
+ER  - 
+
+TY  - BOOK
+TI  - readr: Read Rectangular Text Data
+AU  - Wickham, Hadley
+AU  - Hester, Jim
+AU  - Bryan, Jennifer
+DA  - 2025///
+PY  - 2025
+UR  - https://readr.tidyverse.org
+N1  - <p>R package version 2.1.6</p>
+ER  - 
+
+TY  - BOOK
+TI  - reshape2: Flexibly Reshape Data: A Reboot of the Reshape Package
+AU  - Wickham, Hadley
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/hadley/reshape
+N1  - <p>R package version 1.4.5</p>
+ER  - 
+
+TY  - BOOK
+TI  - rmarkdown: Dynamic Documents for R
+AU  - Allaire, J. J.
+AU  - Xie, Yihui
+AU  - Dervieux, Christophe
+AU  - McPherson, Jonathan
+AU  - Luraschi, Javier
+AU  - Ushey, Kevin
+AU  - Atkins, Aron
+AU  - Wickham, Hadley
+AU  - Cheng, Joe
+AU  - Chang, Winston
+AU  - Iannone, Richard
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/rstudio/rmarkdown
+N1  - <p>R package version 2.30</p>
+ER  - 
+
+TY  - BOOK
+TI  - S4Vectors: Foundation of vector-like and list-like containers in Bioconductor
+AU  - Pagès, Hervé
+AU  - Lawrence, Michael
+AU  - Aboyoun, Patrick
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/S4Vectors
+N1  - <p>R package version 0.48.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - scales: Scale Functions for Visualization
+AU  - Wickham, Hadley
+AU  - Pedersen, Thomas Lin
+AU  - Seidel, Dana
+DA  - 2025///
+PY  - 2025
+UR  - https://scales.r-lib.org
+N1  - <p>R package version 1.4.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - Seqinfo: A simple S4 class for storing basic information about a collection of genomic sequences
+AU  - Pagès, Hervé
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/Seqinfo
+N1  - <p>R package version 1.0.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - stringr: Simple, Consistent Wrappers for Common String Operations
+AU  - Wickham, Hadley
+DA  - 2025///
+PY  - 2025
+UR  - https://stringr.tidyverse.org
+N1  - <p>R package version 1.6.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - SummarizedExperiment: A container (S4 class) for matrix-like assays
+AU  - Morgan, Martin
+AU  - Obenchain, Valerie
+AU  - Hester, Jim
+AU  - Pagès, Hervé
+DA  - 2025///
+PY  - 2025
+UR  - https://bioconductor.org/packages/SummarizedExperiment
+N1  - <p>R package version 1.40.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - svglite: An SVG Graphics Device
+AU  - Wickham, Hadley
+AU  - Henry, Lionel
+AU  - Pedersen, Thomas Lin
+AU  - Luciani, T. Jake
+AU  - Decorde, Matthieu
+AU  - Lise, Vaudor
+DA  - 2025///
+PY  - 2025
+UR  - https://svglite.r-lib.org
+N1  - <p>R package version 2.2.2</p>
+ER  - 
+
+TY  - BOOK
+TI  - tibble: Simple Data Frames
+AU  - Müller, Kirill
+AU  - Wickham, Hadley
+DA  - 2025///
+PY  - 2025
+UR  - https://tibble.tidyverse.org/
+N1  - <p>R package version 3.3.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - tidyr: Tidy Messy Data
+AU  - Wickham, Hadley
+AU  - Vaughan, Davis
+AU  - Girlich, Maximilian
+DA  - 2025///
+PY  - 2025
+UR  - https://tidyr.tidyverse.org
+N1  - <p>R package version 1.3.2</p>
+ER  - 
+
+TY  - BOOK
+TI  - tidyverse: Easily Install and Load the Tidyverse
+AU  - Wickham, Hadley
+DA  - 2023///
+PY  - 2023
+UR  - https://tidyverse.tidyverse.org
+N1  - <p>R package version 2.0.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - usethis: Automate Package and Project Setup
+AU  - Wickham, Hadley
+AU  - Bryan, Jennifer
+AU  - Barrett, Malcolm
+AU  - Teucher, Andy
+DA  - 2025///
+PY  - 2025
+UR  - https://usethis.r-lib.org
+N1  - <p>R package version 3.2.1</p>
+ER  - 
+
+TY  - BOOK
+TI  - webr: Data and Functions for Web-Based Analysis
+AU  - Moon, Keon-Woong
+DA  - 2020///
+PY  - 2020
+UR  - https://github.com/cardiomoon/webr
+N1  - <p>R package version 0.1.5</p>
+ER  - 
+
+TY  - BOOK
+TI  - webshot2: Take Screenshots of Web Pages
+AU  - Chang, Winston
+DA  - 2025///
+PY  - 2025
+UR  - https://rstudio.github.io/webshot2/
+N1  - <p>R package version 0.1.2</p>
+ER  - 
+
+TY  - JOUR
+TI  - Orchestrating high-throughput genomic analysis with Bioconductor
+AU  - Huber, W.
+AU  - Carey, V. J.
+AU  - Gentleman, R.
+AU  - Anders, S.
+AU  - Carlson, M.
+AU  - Carvalho, B. S.
+AU  - Bravo, H. C.
+AU  - Davis, S.
+AU  - Gatto, L.
+AU  - Girke, T.
+AU  - Gottardo, R.
+AU  - Hahne, F.
+AU  - Hansen, K. D.
+AU  - Irizarry, R. A.
+AU  - Lawrence, M.
+AU  - Love, M. I.
+AU  - MacDonald, J.
+AU  - Obenchain, V.
+AU  - Ole's, A. K.
+AU  - Pag`es, H.
+AU  - Reyes, A.
+AU  - Shannon, P.
+AU  - Smyth, G. K.
+AU  - Tenenbaum, D.
+AU  - Waldron, L.
+AU  - Morgan, M.
+T2  - Nature Methods
+DA  - 2015///
+PY  - 2015
+VL  - 12
+IS  - 2
+SP  - 115
+EP  - 121
+UR  - http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html
+ER  - 
+
+TY  - JOUR
+TI  - Orchestrating high-throughput genomic analysis with Bioconductor
+AU  - Huber
+AU  - W.
+AU  - Carey
+AU  - J, V.
+AU  - Gentleman
+AU  - R.
+AU  - Anders
+AU  - S.
+AU  - Carlson
+AU  - M.
+AU  - Carvalho
+AU  - S, B.
+AU  - Bravo
+AU  - C, H.
+AU  - Davis
+AU  - S.
+AU  - Gatto
+AU  - L.
+AU  - Girke
+AU  - T.
+AU  - Gottardo
+AU  - R.
+AU  - Hahne
+AU  - F.
+AU  - Hansen
+AU  - D, K.
+AU  - Irizarry
+AU  - A, R.
+AU  - Lawrence
+AU  - M.
+AU  - Love
+AU  - I, M.
+AU  - MacDonald
+AU  - J.
+AU  - Obenchain
+AU  - V.
+AU  - Ole's
+AU  - K, A.
+AU  - Pag`es
+AU  - H.
+AU  - Reyes
+AU  - A.
+AU  - Shannon
+AU  - P.
+AU  - Smyth
+AU  - K, G.
+AU  - Tenenbaum
+AU  - D.
+AU  - Waldron
+AU  - L.
+AU  - Morgan
+AU  - M.
+T2  - Nature Methods
+DA  - 2015///
+PY  - 2015
+VL  - 12
+IS  - 2
+SP  - 115
+EP  - 121
+UR  - http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html
+ER  - 
+
+TY  - JOUR
+TI  - Multiomic Integration of Public Oncology Databases in Bioconductor
+AU  - Ramos, Marcel
+AU  - Geistlinger, Ludwig
+AU  - Oh, Sehyun
+AU  - Schiffer, Lucas
+AU  - Azhar, Rimsha
+AU  - Kodali, Hanish
+AU  - Bruijn, Ino de
+AU  - Gao, Jianjiong
+AU  - Carey, Vincent J.
+AU  - Morgan, Martin
+AU  - Waldron, Levi
+T2  - JCO Clinical Cancer Informatics
+DA  - 2020///
+PY  - 2020
+DO  - 10.1200/CCI.19.00119
+VL  - 1
+IS  - 4
+SP  - 958
+EP  - 971
+UR  - https://ascopubs.org/doi/pdf/10.1200/CCI.19.00119
+ER  - 
+
+TY  - JOUR
+TI  - Complex heatmaps reveal patterns and correlations in multidimensional genomic data
+AU  - Gu, Zuguang
+AU  - Eils, Roland
+AU  - Schlesner, Matthias
+T2  - Bioinformatics
+DA  - 2016///
+PY  - 2016
+DO  - 10.1093/bioinformatics/btw313
+ER  - 
+
+TY  - JOUR
+TI  - Complex Heatmap Visualization
+AU  - Gu, Zuguang
+T2  - iMeta
+DA  - 2022///
+PY  - 2022
+DO  - 10.1002/imt2.43
+ER  - 
+
+TY  - JOUR
+TI  - Software for Computing and Annotating Genomic Ranges
+AU  - Lawrence, Michael
+AU  - Huber, Wolfgang
+AU  - Pagès, Hervé
+AU  - Aboyoun, Patrick
+AU  - Carlson, Marc
+AU  - Gentleman, Robert
+AU  - Morgan, Martin
+AU  - Carey, Vincent
+T2  - PLoS Computational Biology
+DA  - 2013///
+PY  - 2013
+DO  - 10.1371/journal.pcbi.1003118
+VL  - 9
+IS  - 8
+UR  - http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118
+ER  - 
+
+TY  - JOUR
+TI  - ggalluvial: Layered Grammar for Alluvial Plots
+AU  - Brunson, Jason Cory
+T2  - Journal of Open Source Software
+DA  - 2020///
+PY  - 2020
+DO  - 10.21105/joss.02017
+VL  - 5
+IS  - 49
+SP  - 2017
+ER  - 
+
+TY  - BOOK
+TI  - ggplot2: Elegant Graphics for Data Analysis
+AU  - Wickham, Hadley
+DA  - 2016///
+PY  - 2016
+PB  - Springer-Verlag New York
+SN  - 978-3-319-24277-4
+UR  - https://ggplot2.tidyverse.org
+ER  - 
+
+TY  - JOUR
+TI  - Reproducible Summary Tables with the gtsummary Package
+AU  - Sjoberg, Daniel D.
+AU  - Whiting, Karissa
+AU  - Curry, Michael
+AU  - Lavery, Jessica A.
+AU  - Larmarange, Joseph
+T2  - The R Journal
+DA  - 2021///
+PY  - 2021
+DO  - 10.32614/RJ-2021-053
+VL  - 13
+IS  - 1
+SP  - 570
+EP  - 580
+UR  - https://doi.org/10.32614/RJ-2021-053
+ER  - 
+
+TY  - JOUR
+TI  - Software for Computing and Annotating Genomic Ranges
+AU  - Lawrence, Michael
+AU  - Huber, Wolfgang
+AU  - Pagès, Hervé
+AU  - Aboyoun, Patrick
+AU  - Carlson, Marc
+AU  - Gentleman, Robert
+AU  - Morgan, Martin
+AU  - Carey, Vincent
+T2  - PLoS Computational Biology
+DA  - 2013///
+PY  - 2013
+DO  - 10.1371/journal.pcbi.1003118
+VL  - 9
+IS  - 8
+UR  - http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118
+ER  - 
+
+TY  - BOOK
+TI  - Dynamic Documents with R and knitr
+AU  - Xie, Yihui
+CY  - Boca Raton, Florida
+DA  - 2015///
+PY  - 2015
+ET  - 2nd
+PB  - Chapman and Hall/CRC
+UR  - https://yihui.org/knitr/
+N1  - <p>ISBN 978-1498716963</p>
+ER  - 
+
+TY  - CHAP
+TI  - knitr: A Comprehensive Tool for Reproducible Research in R
+AU  - Xie, Yihui
+T2  - Implementing Reproducible Computational Research
+A2  - Stodden, Victoria
+A2  - Leisch, Friedrich
+A2  - Peng, Roger D.
+DA  - 2014///
+PY  - 2014
+PB  - Chapman and Hall/CRC
+N1  - <p>ISBN 978-1466561595</p>
+ER  - 
+
+TY  - JOUR
+TI  - Dates and Times Made Easy with lubridate
+AU  - Grolemund, Garrett
+AU  - Wickham, Hadley
+T2  - Journal of Statistical Software
+DA  - 2011///
+PY  - 2011
+VL  - 40
+IS  - 3
+SP  - 1
+EP  - 25
+UR  - https://www.jstatsoft.org/v40/i03/
+ER  - 
+
+TY  - JOUR
+TI  - Software For The Integration Of Multi-Omics Experiments In Bioconductor
+AU  - Ramos, Marcel
+AU  - Schiffer, Lucas
+AU  - Re, Angela
+AU  - Azhar, Rimsha
+AU  - Basunia, Azfar
+AU  - Cabrera, Carmen Rodriguez
+AU  - Chan, Tiffany
+AU  - Chapman, Philip
+AU  - Davis, Sean
+AU  - Gomez-Cabrero, David
+AU  - Culhane, Aedin C.
+AU  - Haibe-Kains, Benjamin
+AU  - Hansen, Kasper
+AU  - Kodali, Hanish
+AU  - Louis, Marie S.
+AU  - Mer, Arvind S.
+AU  - Reister, Markus
+AU  - Morgan, Martin
+AU  - Carey, Vincent J.
+AU  - Waldron, Levi
+T2  - Cancer Research
+DA  - 2017///
+PY  - 2017
+DO  - 10.1158/0008-5472.CAN-17-0344
+VL  - 77
+IS  - 21
+SP  - e39
+EP  - 42
+UR  - https://cancerres.aacrjournals.org/content/77/21/e39
+ER  - 
+
+TY  - BOOK
+TI  - pacman: Package Management for R
+AU  - Rinker, Tyler W.
+AU  - Kurkiewicz, Dason
+CY  - Buffalo, New York
+DA  - 2018///
+PY  - 2018
+UR  - http://github.com/trinker/pacman
+N1  - <p>version 0.5.0</p>
+ER  - 
+
+TY  - BOOK
+TI  - Interactive Web-Based Data Visualization with R, plotly, and shiny
+AU  - Sievert, Carson
+DA  - 2020///
+PY  - 2020
+PB  - Chapman and Hall/CRC
+SN  - 978-1-138-33145-7
+UR  - https://plotly-r.com
+ER  - 
+
+TY  - JOUR
+TI  - Reshaping Data with the reshape Package
+AU  - Wickham, Hadley
+T2  - Journal of Statistical Software
+DA  - 2007///
+PY  - 2007
+VL  - 21
+IS  - 12
+SP  - 1
+EP  - 20
+UR  - https://www.jstatsoft.org/v21/i12/
+ER  - 
+
+TY  - BOOK
+TI  - R Markdown: The Definitive Guide
+AU  - Xie, Yihui
+AU  - Allaire, J. J.
+AU  - Grolemund, Garrett
+CY  - Boca Raton, Florida
+DA  - 2018///
+PY  - 2018
+PB  - Chapman and Hall/CRC
+SN  - 978-1-138-35933-8
+UR  - https://bookdown.org/yihui/rmarkdown
+ER  - 
+
+TY  - BOOK
+TI  - R Markdown Cookbook
+AU  - Xie, Yihui
+AU  - Dervieux, Christophe
+AU  - Riederer, Emily
+CY  - Boca Raton, Florida
+DA  - 2020///
+PY  - 2020
+PB  - Chapman and Hall/CRC
+SN  - 978-0-367-56383-7
+UR  - https://bookdown.org/yihui/rmarkdown-cookbook
+ER  - 
+
+TY  - JOUR
+TI  - Welcome to the tidyverse
+AU  - Wickham, Hadley
+AU  - Averick, Mara
+AU  - Bryan, Jennifer
+AU  - Chang, Winston
+AU  - McGowan, Lucy D'Agostino
+AU  - François, Romain
+AU  - Grolemund, Garrett
+AU  - Hayes, Alex
+AU  - Henry, Lionel
+AU  - Hester, Jim
+AU  - Kuhn, Max
+AU  - Pedersen, Thomas Lin
+AU  - Miller, Evan
+AU  - Bache, Stephan Milton
+AU  - Müller, Kirill
+AU  - Ooms, Jeroen
+AU  - Robinson, David
+AU  - Seidel, Dana Paige
+AU  - Spinu, Vitalie
+AU  - Takahashi, Kohske
+AU  - Vaughan, Davis
+AU  - Wilke, Claus
+AU  - Woo, Kara
+AU  - Yutani, Hiroaki
+T2  - Journal of Open Source Software
+DA  - 2019///
+PY  - 2019
+DO  - 10.21105/joss.01686
+VL  - 4
+IS  - 43
+SP  - 1686
+ER  - 
+
+TY  - BOOK
+TI  - R: A Language and Environment for Statistical Computing
+AU  - R Core Team
+CY  - Vienna, Austria
+DA  - 2025///
+PY  - 2025
 PB  - R Foundation for Statistical Computing
 UR  - https://www.R-project.org/
 ER  - 
@@ -12,19 +939,29 @@ TY  - BOOK
 TI  - BiocManager: Access the Bioconductor Project Package Repository
 AU  - Morgan, Martin
 AU  - Ramos, Marcel
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://bioconductor.github.io/BiocManager/
-N1  - <p>R package version 1.30.25</p>
+N1  - <p>R package version 1.30.27</p>
 ER  - 
 
 TY  - BOOK
 TI  - bookdown: Authoring Books and Technical Documents with R Markdown
 AU  - Xie, Yihui
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/rstudio/bookdown
-N1  - <p>R package version 0.40</p>
+N1  - <p>R package version 0.46</p>
+ER  - 
+
+TY  - BOOK
+TI  - broom.helpers: Helpers for Model Coefficients Tibbles
+AU  - Larmarange, Joseph
+AU  - Sjoberg, Daniel D.
+DA  - 2025///
+PY  - 2025
+UR  - https://larmarange.github.io/broom.helpers/
+N1  - <p>R package version 1.22.0</p>
 ER  - 
 
 TY  - BOOK
@@ -32,10 +969,10 @@ TI  - car: Companion to Applied Regression
 AU  - Fox, John
 AU  - Weisberg, Sanford
 AU  - Price, Brad
-DA  - 2023///
-PY  - 2023
+DA  - 2024///
+PY  - 2024
 UR  - https://r-forge.r-project.org/projects/car/
-N1  - <p>R package version 3.1-2</p>
+N1  - <p>R package version 3.1-3</p>
 ER  - 
 
 TY  - BOOK
@@ -52,10 +989,10 @@ ER  -
 TY  - BOOK
 TI  - caret: Classification and Regression Training
 AU  - Kuhn, Max
-DA  - 2023///
-PY  - 2023
+DA  - 2024///
+PY  - 2024
 UR  - https://github.com/topepo/caret/
-N1  - <p>R package version 6.0-94</p>
+N1  - <p>R package version 7.0-1</p>
 ER  - 
 
 TY  - BOOK
@@ -64,19 +1001,19 @@ AU  - Maechler, Martin
 AU  - Rousseeuw, Peter
 AU  - Struyf, Anja
 AU  - Hubert, Mia
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://svn.r-project.org/R-packages/trunk/cluster/
-N1  - <p>R package version 2.1.6</p>
+N1  - <p>R package version 2.1.8.1</p>
 ER  - 
 
 TY  - BOOK
 TI  - ComplexHeatmap: Make Complex Heatmaps
 AU  - Gu, Zuguang
-DA  - 2024///
-PY  - 2024
-UR  - https://bioconductor.org/packages/ComplexHeatmap
-N1  - <p>R package version 2.20.0</p>
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/jokergoo/ComplexHeatmap
+N1  - <p>R package version 2.26.0</p>
 ER  - 
 
 TY  - BOOK
@@ -95,16 +1032,16 @@ AU  - Simko, Viliam
 DA  - 2024///
 PY  - 2024
 UR  - https://github.com/taiyun/corrplot
-N1  - <p>R package version 0.94</p>
+N1  - <p>R package version 0.95</p>
 ER  - 
 
 TY  - BOOK
 TI  - cowplot: Streamlined Plot Theme and Plot Annotations for ggplot2
 AU  - Wilke, Claus O.
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://wilkelab.org/cowplot/
-N1  - <p>R package version 1.1.3</p>
+N1  - <p>R package version 1.2.0</p>
 ER  - 
 
 TY  - BOOK
@@ -116,20 +1053,21 @@ AU  - Gorecki, Jan
 AU  - Chirico, Michael
 AU  - Hocking, Toby
 AU  - Schwendinger, Benjamin
-DA  - 2024///
-PY  - 2024
+AU  - Krylov, Ivan
+DA  - 2025///
+PY  - 2025
 UR  - https://r-datatable.com
-N1  - <p>R package version 1.16.0</p>
+N1  - <p>R package version 1.17.8</p>
 ER  - 
 
 TY  - BOOK
 TI  - dendextend: Extending dendrogram Functionality in R
 AU  - Galili, Tal
 AU  - Jefferis, Gregory
-DA  - 2023///
-PY  - 2023
-UR  - http://talgalili.github.io/dendextend/
-N1  - <p>R package version 1.17.1</p>
+DA  - 2025///
+PY  - 2025
+UR  - https://talgalili.github.io/dendextend/
+N1  - <p>R package version 1.19.1</p>
 ER  - 
 
 TY  - BOOK
@@ -138,10 +1076,10 @@ AU  - Wickham, Hadley
 AU  - Hester, Jim
 AU  - Chang, Winston
 AU  - Bryan, Jennifer
-DA  - 2022///
-PY  - 2022
+DA  - 2025///
+PY  - 2025
 UR  - https://devtools.r-lib.org/
-N1  - <p>R package version 2.4.5</p>
+N1  - <p>R package version 2.4.6</p>
 ER  - 
 
 TY  - BOOK
@@ -170,19 +1108,19 @@ ER  -
 TY  - BOOK
 TI  - forcats: Tools for Working with Categorical Variables (Factors)
 AU  - Wickham, Hadley
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://forcats.tidyverse.org/
-N1  - <p>R package version 1.0.0</p>
+N1  - <p>R package version 1.0.1</p>
 ER  - 
 
 TY  - BOOK
 TI  - foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, ...
 AU  - R Core Team
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://svn.r-project.org/R-packages/trunk/foreign/
-N1  - <p>R package version 0.8-87</p>
+N1  - <p>R package version 0.8-90</p>
 ER  - 
 
 TY  - BOOK
@@ -200,7 +1138,7 @@ AU  - Hennig, Christian
 DA  - 2024///
 PY  - 2024
 UR  - https://www.unibo.it/sitoweb/christian.hennig/en/
-N1  - <p>R package version 2.2-12</p>
+N1  - <p>R package version 2.2-13</p>
 ER  - 
 
 TY  - BOOK
@@ -216,10 +1154,10 @@ ER  -
 TY  - BOOK
 TI  - ggh4x: Hacks for ggplot2
 AU  - Brand, Teun van den
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/teunbrand/ggh4x
-N1  - <p>R package version 0.2.8</p>
+N1  - <p>R package version 0.3.1</p>
 ER  - 
 
 TY  - BOOK
@@ -234,19 +1172,19 @@ AU  - Woo, Kara
 AU  - Yutani, Hiroaki
 AU  - Dunnington, Dewey
 AU  - Brand, Teun van den
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://ggplot2.tidyverse.org
-N1  - <p>R package version 3.5.1</p>
+N1  - <p>R package version 4.0.1</p>
 ER  - 
 
 TY  - BOOK
 TI  - ggpubr: ggplot2 Based Publication Ready Plots
 AU  - Kassambara, Alboukadel
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://rpkgs.datanovia.com/ggpubr/
-N1  - <p>R package version 0.6.0</p>
+N1  - <p>R package version 0.6.2</p>
 ER  - 
 
 TY  - BOOK
@@ -255,16 +1193,16 @@ AU  - Slowikowski, Kamil
 DA  - 2024///
 PY  - 2024
 UR  - https://ggrepel.slowkow.com/
-N1  - <p>R package version 0.9.5</p>
+N1  - <p>R package version 0.9.6</p>
 ER  - 
 
 TY  - BOOK
 TI  - ggstats: Extension to ggplot2 for Plotting Stats
 AU  - Larmarange, Joseph
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://larmarange.github.io/ggstats/
-N1  - <p>R package version 0.6.0</p>
+N1  - <p>R package version 0.12.0</p>
 ER  - 
 
 TY  - BOOK
@@ -281,15 +1219,17 @@ TI  - gt: Easily Create Presentation-Ready Display Tables
 AU  - Iannone, Richard
 AU  - Cheng, Joe
 AU  - Schloerke, Barret
+AU  - Haughton, Shannon
 AU  - Hughes, Ellis
 AU  - Lauer, Alexandra
+AU  - François, Romain
 AU  - Seo, JooYoung
 AU  - Brevoort, Ken
 AU  - Roy, Olivier
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://gt.rstudio.com
-N1  - <p>R package version 0.11.0</p>
+N1  - <p>R package version 1.2.0</p>
 ER  - 
 
 TY  - BOOK
@@ -312,22 +1252,23 @@ TI  - gtsummary: Presentation-Ready Data Summary and Analytic Result Tables
 AU  - Sjoberg, Daniel D.
 AU  - Larmarange, Joseph
 AU  - Curry, Michael
+AU  - Rua, Emily de la
 AU  - Lavery, Jessica
 AU  - Whiting, Karissa
 AU  - Zabor, Emily C.
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/ddsjoberg/gtsummary
-N1  - <p>R package version 2.0.1</p>
+N1  - <p>R package version 2.5.0</p>
 ER  - 
 
 TY  - BOOK
 TI  - janitor: Simple Tools for Examining and Cleaning Dirty Data
 AU  - Firke, Sam
-DA  - 2023///
-PY  - 2023
+DA  - 2024///
+PY  - 2024
 UR  - https://github.com/sfirke/janitor
-N1  - <p>R package version 2.2.0</p>
+N1  - <p>R package version 2.2.1</p>
 ER  - 
 
 TY  - BOOK
@@ -342,19 +1283,19 @@ ER  -
 TY  - BOOK
 TI  - knitr: A General-Purpose Package for Dynamic Report Generation in R
 AU  - Xie, Yihui
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://yihui.org/knitr/
-N1  - <p>R package version 1.48</p>
+N1  - <p>R package version 1.51</p>
 ER  - 
 
 TY  - BOOK
 TI  - lattice: Trellis Graphics for R
 AU  - Sarkar, Deepayan
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://lattice.r-forge.r-project.org/
-N1  - <p>R package version 0.22-6</p>
+N1  - <p>R package version 0.22-7</p>
 ER  - 
 
 TY  - BOOK
@@ -362,29 +1303,29 @@ TI  - lubridate: Make Dealing with Dates a Little Easier
 AU  - Spinu, Vitalie
 AU  - Grolemund, Garrett
 AU  - Wickham, Hadley
-DA  - 2023///
-PY  - 2023
+DA  - 2024///
+PY  - 2024
 UR  - https://lubridate.tidyverse.org
-N1  - <p>R package version 1.9.3</p>
+N1  - <p>R package version 1.9.4</p>
 ER  - 
 
 TY  - BOOK
 TI  - maps: Draw Geographical Maps
-AU  - Brownrigg, Ray
-DA  - 2023///
-PY  - 2023
-UR  - https://CRAN.R-project.org/package=maps
-N1  - <p>R package version 3.4.2</p>
+AU  - Deckmyn, Alex
+DA  - 2025///
+PY  - 2025
+UR  - https://github.com/adeckmyn/maps
+N1  - <p>R package version 3.4.3</p>
 ER  - 
 
 TY  - BOOK
 TI  - MASS: Support Functions and Datasets for Venables and Ripley's MASS
 AU  - Ripley, Brian
 AU  - Venables, Bill
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - http://www.stats.ox.ac.uk/pub/MASS4/
-N1  - <p>R package version 7.3-61</p>
+N1  - <p>R package version 7.3-65</p>
 ER  - 
 
 TY  - BOOK
@@ -402,10 +1343,10 @@ ER  -
 TY  - BOOK
 TI  - nnet: Feed-Forward Neural Networks and Multinomial Log-Linear Models
 AU  - Ripley, Brian
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - http://www.stats.ox.ac.uk/pub/MASS4/
-N1  - <p>R package version 7.3-19</p>
+N1  - <p>R package version 7.3-20</p>
 ER  - 
 
 TY  - BOOK
@@ -421,29 +1362,29 @@ ER  -
 TY  - BOOK
 TI  - patchwork: The Composer of Plots
 AU  - Pedersen, Thomas Lin
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://patchwork.data-imaginist.com
-N1  - <p>R package version 1.2.0</p>
+N1  - <p>R package version 1.3.2</p>
 ER  - 
 
 TY  - BOOK
 TI  - pivottabler: Create Pivot Tables
 AU  - Bailiss, Christopher
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - http://www.pivottabler.org.uk/
-N1  - <p>R package version 1.5.5</p>
+N1  - <p>R package version 1.5.6</p>
 ER  - 
 
 TY  - BOOK
 TI  - purrr: Functional Programming Tools
 AU  - Wickham, Hadley
 AU  - Henry, Lionel
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://purrr.tidyverse.org/
-N1  - <p>R package version 1.0.2</p>
+N1  - <p>R package version 1.2.0</p>
 ER  - 
 
 TY  - BOOK
@@ -460,29 +1401,29 @@ TI  - readr: Read Rectangular Text Data
 AU  - Wickham, Hadley
 AU  - Hester, Jim
 AU  - Bryan, Jennifer
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://readr.tidyverse.org
-N1  - <p>R package version 2.1.5</p>
+N1  - <p>R package version 2.1.6</p>
 ER  - 
 
 TY  - BOOK
 TI  - readxl: Read Excel Files
 AU  - Wickham, Hadley
 AU  - Bryan, Jennifer
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://readxl.tidyverse.org
-N1  - <p>R package version 1.4.3</p>
+N1  - <p>R package version 1.4.5</p>
 ER  - 
 
 TY  - BOOK
 TI  - reshape2: Flexibly Reshape Data: A Reboot of the Reshape Package
 AU  - Wickham, Hadley
-DA  - 2020///
-PY  - 2020
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/hadley/reshape
-N1  - <p>R package version 1.4.4</p>
+N1  - <p>R package version 1.4.5</p>
 ER  - 
 
 TY  - BOOK
@@ -498,10 +1439,10 @@ AU  - Wickham, Hadley
 AU  - Cheng, Joe
 AU  - Chang, Winston
 AU  - Iannone, Richard
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/rstudio/rmarkdown
-N1  - <p>R package version 2.28</p>
+N1  - <p>R package version 2.30</p>
 ER  - 
 
 TY  - BOOK
@@ -509,10 +1450,10 @@ TI  - scales: Scale Functions for Visualization
 AU  - Wickham, Hadley
 AU  - Pedersen, Thomas Lin
 AU  - Seidel, Dana
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://scales.r-lib.org
-N1  - <p>R package version 1.3.0</p>
+N1  - <p>R package version 1.4.0</p>
 ER  - 
 
 TY  - BOOK
@@ -528,19 +1469,19 @@ TY  - BOOK
 TI  - sp: Classes and Methods for Spatial Data
 AU  - Pebesma, Edzer
 AU  - Bivand, Roger
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://github.com/edzer/sp/
-N1  - <p>R package version 2.1-4</p>
+N1  - <p>R package version 2.2-0</p>
 ER  - 
 
 TY  - BOOK
 TI  - stringr: Simple, Consistent Wrappers for Common String Operations
 AU  - Wickham, Hadley
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://stringr.tidyverse.org
-N1  - <p>R package version 1.5.1</p>
+N1  - <p>R package version 1.6.0</p>
 ER  - 
 
 TY  - BOOK
@@ -549,7 +1490,7 @@ AU  - Therneau, Terry M.
 DA  - 2024///
 PY  - 2024
 UR  - https://github.com/therneau/survival
-N1  - <p>R package version 3.7-0</p>
+N1  - <p>R package version 3.8-3</p>
 ER  - 
 
 TY  - BOOK
@@ -567,10 +1508,10 @@ TY  - BOOK
 TI  - tibble: Simple Data Frames
 AU  - Müller, Kirill
 AU  - Wickham, Hadley
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://tibble.tidyverse.org/
-N1  - <p>R package version 3.2.1</p>
+N1  - <p>R package version 3.3.0</p>
 ER  - 
 
 TY  - BOOK
@@ -578,10 +1519,10 @@ TI  - tidyr: Tidy Messy Data
 AU  - Wickham, Hadley
 AU  - Vaughan, Davis
 AU  - Girlich, Maximilian
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://tidyr.tidyverse.org
-N1  - <p>R package version 1.3.1</p>
+N1  - <p>R package version 1.3.2</p>
 ER  - 
 
 TY  - BOOK
@@ -599,10 +1540,10 @@ AU  - Wickham, Hadley
 AU  - Bryan, Jennifer
 AU  - Barrett, Malcolm
 AU  - Teucher, Andy
-DA  - 2024///
-PY  - 2024
+DA  - 2025///
+PY  - 2025
 UR  - https://usethis.r-lib.org
-N1  - <p>R package version 3.0.0</p>
+N1  - <p>R package version 3.2.1</p>
 ER  - 
 
 TY  - BOOK
@@ -617,10 +1558,10 @@ ER  -
 TY  - BOOK
 TI  - webshot2: Take Screenshots of Web Pages
 AU  - Chang, Winston
-DA  - 2023///
-PY  - 2023
+DA  - 2025///
+PY  - 2025
 UR  - https://rstudio.github.io/webshot2/
-N1  - <p>R package version 0.1.1</p>
+N1  - <p>R package version 0.1.2</p>
 ER  - 
 
 TY  - BOOK
@@ -643,7 +1584,7 @@ DA  - 2019///
 PY  - 2019
 ET  - Third
 PB  - Sage
-UR  - https://socialsciences.mcmaster.ca/jfox/Books/Companion/
+UR  - https://www.john-fox.ca/Companion/
 ER  - 
 
 TY  - JOUR
@@ -688,7 +1629,7 @@ AU  - Simko, Viliam
 DA  - 2024///
 PY  - 2024
 UR  - https://github.com/taiyun/corrplot
-N1  - <p>(Version 0.94)</p>
+N1  - <p>(Version 0.95)</p>
 ER  - 
 
 TY  - JOUR
@@ -698,7 +1639,7 @@ T2  - Bioinformatics
 DA  - 2015///
 PY  - 2015
 DO  - 10.1093/bioinformatics/btv428
-UR  - https://academic.oup.com/bioinformatics/article/31/22/3718/240978/dendextend-an-R-package-for-visualizing-adjusting
+UR  - https://doi.org/10.1093/bioinformatics/btv428
 ER  - 
 
 TY  - JOUR
@@ -854,7 +1795,7 @@ VL  - 21
 IS  - 12
 SP  - 1
 EP  - 20
-UR  - http://www.jstatsoft.org/v21/i12/
+UR  - https://www.jstatsoft.org/v21/i12/
 ER  - 
 
 TY  - BOOK
