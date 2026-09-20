@@ -24791,7 +24791,7 @@ complexhm_solecancerpos <- ComplexHeatmap::Heatmap(t(scale(t(solecancerpos_matri
                                                                               c("lavender", 
                                                                                 "white",
                                                                                 "red")),
-                                                   name = "Row Z-Score",
+                                                   name = "Z-Score",
                                                    # name = "Proportion",
                                                    na_col = "white",
                                                    row_names_side = "left",
@@ -28934,6 +28934,8 @@ $~$
 plot_grid(fig_1_top,
           fig_1_bottom,
           ncol = 1,
+          labels = "AUTO", # alphabetical caps
+          label_size = 30, # size of alpha cap labels
           rel_heights = c(1, 0.6)) %>% # when multiple rows have panels be multiples of one in height
     save_plot(paste0(fig_path, 
                      "figure-1.pdf"),
@@ -53533,11 +53535,17 @@ ggforest2 <- function (model,
 }
 
 
+# now original package can plot correctly so revert to it
+detach("package:survminer", unload = TRUE)
+pacman::p_load_gh("kassambara/survminer") 
+
 # model itself is fine but just not plotting typical way so try another way
-fig_2b <- ggforest2(coxph_obj,
-                    fontsize = 1.4)
-ggforest2(coxph_obj,
-          fontsize = 1.4) 
+fig_2b <- ggforest(coxph_obj, 
+                   var.labels = c(Cancer_vs_mut_cluster = "Heatmap cluster"),
+                   fontsize = 1.4)
+ggforest(coxph_obj, 
+         var.labels = c(Cancer_vs_mut_cluster = "Heatmap cluster"),
+         fontsize = 1.4) 
 ```
 
 $~$ 
